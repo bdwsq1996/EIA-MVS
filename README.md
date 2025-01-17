@@ -117,7 +117,7 @@ For quantitative evaluation, you can upload your point clouds to [Tanks and Temp
 
 ## Citation
 ```bibtex
-@ARTICLE{10700633,
+@ARTICLE{wang2024eiamvs,
   author={Wang, Shaoqian and Li, Bo and Yang, Jian and Dai, Yuchao},
   journal={IEEE Robotics and Automation Letters}, 
   title={Adaptive Feature Enhanced Multi-View Stereo With Epipolar Line Information Aggregation}, 
