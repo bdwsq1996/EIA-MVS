@@ -18,7 +18,7 @@ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.8.0 -f h
 
 #### 1. DTU Dataset
 
-**Training data**. We use the same DTU training data as mentioned in MVSNet and CasMVSNet. Download [DTU training data](https://drive.google.com/file/d/1eDjh-_bxKKnEuz5h-HXS7EDJn59clx6V/view) and [Depth raw](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/cascade-stereo/CasMVSNet/dtu_data/dtu_train_hr/Depths_raw.zip). Unzip and organize them as:
+**Training data**. We use the same DTU training data as mentioned in MVSNet and CasMVSNet. Download [DTU training data](http://roboimagedata2.compute.dtu.dk/data/MVS/Rectified.zip) and [Depth raw](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/cascade-stereo/CasMVSNet/dtu_data/dtu_train_hr/Depths_raw.zip). Unzip and organize them as:
 ```
 dtu_training                     
     ├── Cameras                
@@ -86,7 +86,7 @@ bash train_bld.sh
 
 ### Testing on DTU
 
-For DTU testing, we use the model ([pretrained model](https://drive.google.com/file/d/1D82VEWimgnB_cDwrUGJaIZTEXU0v--Xf/view?usp=drive_link)) trained on DTU training dataset. Specify `DTU_TESTPATH` and `DTU_CKPT_FILE` in `test_dtu.sh` first, then run the following command to generate point cloud results.
+For DTU testing, specify `DTU_TESTPATH` and `DTU_CKPT_FILE` in `test_dtu.sh` first, then run the following command to generate point cloud results.
 ```
 bash test_dtu.sh
 ```
@@ -106,7 +106,7 @@ ComputeStat_web
 ```
 
 ### Testing on Tanks and Temples
-We recommend using the finetuned model ([pretrained model](https://drive.google.com/file/d/1T-e09S5Dd6I0x9CATPHYV143L-w8NEsF/view?usp=drive_link)) to test on Tanks and Temples benchmark. Similarly, specify `TNT_TESTPATH` and `TNT_CKPT_FILE` in `test_tnt_inter.sh` and `test_tnt_adv.sh`. To generate point cloud results, just run:
+Similarly, specify `TNT_TESTPATH` and `TNT_CKPT_FILE` in `test_tnt_inter.sh` and `test_tnt_adv.sh`. To generate point cloud results, just run:
 ```
 bash test_tnt_inter.sh
 ```
